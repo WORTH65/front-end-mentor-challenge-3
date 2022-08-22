@@ -1,0 +1,244 @@
+/* Full PAge Setup */
+:root {
+    /* Primary Colors */
+    --white: hsl(0, 0%, 100%);
+    --light-red: hsl(355, 100%, 74%);
+    --dark-blue: hsl(208, 49%, 24%);
+    /* Neutral States */
+    --blue: hsl(240, 2%, 79%);
+    --grey-blue: hsl(207, 13%, 34%);
+    --black-blue: hsl(240, 10%, 16%);
+    /* Gradient Colors */
+    --gradient-light-red: hsl(13, 100%, 72%);
+    --gradient-red: hsl(353, 100%, 62%);
+    --gradient-dark-blue: hsla(237, 17%, 21%, 0.9);
+    --gradient-blue: hsl(237, 23%, 32%);
+    /* Layout Measurements */
+    --border-radius: 12rem;
+    --container-padding: 10rem;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Overpass', sans-serif;
+    color: var(--white);
+}
+h1 {
+    font-size: 4rem;
+    margin: 0.5rem 0; 
+}
+a {
+    text-decoration: none;
+    color: var(--white);
+}
+
+/* Buttons and Links */
+.btn {
+    padding: 0.5rem;
+    border: 1px solid transparent;
+    border-radius: 100px;
+    text-align: center;
+    width: 6rem;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 500;
+}
+.btn-primary {
+    background-color: var(--white);
+    color: var(--gradient-red);
+    transition: 0.2s;
+}
+.btn-primary:hover {
+    background-color: hsla(0, 0%, 100%, 0.3);
+    color: var(--white);
+    transition: 0.5s;
+}
+.btn-secondary {
+    border: 1px solid var(--white);
+}
+.btn-secondary, .btn-login {
+    background-color: transparent;
+    transition: 0.2s;
+}
+.btn-login:hover {
+    text-decoration: underline;
+    transition: 0.5s;
+}
+.btn-secondary:hover {
+    background-color: var(--white);
+    color: var(--gradient-red);
+    transition: 0.5s;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 0.5em;
+}
+::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+::-webkit-scrollbar-thumb {
+    background-color: var(--light-red);
+    border: 2px solid var(--gradient-red);
+    border-radius: 100px;
+}
+
+/* Header */
+header, .header-left, .header-right {
+    display: flex;
+    align-items: center;
+}
+header {
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem var(--container-padding);
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 500;
+}
+.header-option {
+    cursor: pointer;
+    color: hsla(0, 0%, 100%, 0.8);
+    padding: 0 1rem;
+}
+.header-option:hover {
+    color: var(--white);
+}
+.site-logo {
+    height: 48px;
+    margin-right: 2rem; 
+    padding: 0 1rem;    
+}
+.dropdown {
+    position: absolute;
+    color: black;
+    font-weight: 400;
+    background-color: var(--white);
+    border-radius: 6px;
+    padding: 0.5rem 0;
+    box-shadow: 0px 0px 4px hsla(0, 100%, 0%, 0.1);
+    display: none;
+}
+.dropdown p {
+    margin: 0.5rem 1rem;
+    transition: 0.2s;
+}
+.dropdown p:hover {
+    font-weight: 700;
+    transition: 0.5s;
+}
+
+/* Landing-page top */
+.lander-container {
+    padding: 3rem 1%;
+    background: url('images/bg-pattern-intro-desktop.svg') no-repeat left center, linear-gradient(to right, var(--gradient-light-red), var(--gradient-red));
+    /* background-image: linear-gradient(to right, var(--gradient-light-red), var(--gradient-red)), url('images/bg-pattern-intro-desktop.svg'); */
+    border-bottom-left-radius: var(--border-radius);
+}
+.lander-content {
+    text-align: center;
+    margin: 5rem 0;
+}
+
+.lander-btn a {
+    display: inline-block;
+    margin: 0.5rem;
+    width: 8rem;
+}
+
+/* Content Section */
+.flex {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.flex p{
+    line-height: 200%;
+    text-align: justify;
+}
+.editor-section {
+    margin-bottom: 6rem;
+}
+.editor-section > div {
+    width: 40%;
+    color: var(--dark-blue);
+}
+h2 {
+    color: var(--dark-blue);
+    text-align: center;
+    font-size: 2.6rem;
+    margin-top: 6rem;
+    margin-bottom: -2rem;
+}
+h4 {
+    font-size: 2rem;
+}
+.editor-section img {
+    width: 100%;
+}
+.editor-content p {
+    max-width: 76%;
+}
+
+/* Art infrastructure section */
+.art-section {
+    background: url('images/bg-pattern-circles.svg') no-repeat -3rem bottom, linear-gradient(to right, var(--gradient-dark-blue), var(--gradient-blue));
+    border-bottom-left-radius: var(--border-radius);
+    border-top-right-radius: var(--border-radius);
+    justify-content: space-evenly;
+    max-height: 30rem;
+    margin-bottom: 6rem;
+}
+.art-content {
+    width: 36%;
+}
+.art-section h2 {
+    color: var(--white);
+    text-align: left;
+    margin: 0;
+}
+.art-section h4 {
+    margin: 1.2rem 0 1rem 0;
+}
+
+/* Laptop Image Section */
+.laptop-section {
+    justify-content: flex-start;
+    margin-bottom: 6rem;
+}
+.laptop-section > div {
+    width: 40%;
+    color: var(--dark-blue);
+}
+.laptop-content {
+    margin-left: 10rem;
+}
+.laptop-image img {
+    width: 100%;
+}
+.laptop-content p {
+    max-width: 76%;
+}
+
+/* Footer Section */
+footer {
+    background-color: var(--black-blue);
+    color: var(--white);
+    padding: 4rem var(--container-padding);
+    border-top-right-radius: var(--border-radius);
+    font-family: 'Ubuntu', sans-serif;
+}
+#image-tab {
+    vertical-align: top;
+}
+table tr th {
+    padding: 0.5rem 10rem 0.5rem 0;
+}
+table tr td {
+    color: hsla(0, 0%, 100%, 0.8);
+    padding: 0.4rem 0;
+}
+table tr td:hover {
+    color: var(--white);
+    cursor: pointer;
+    text-decoration: underline;
+}
